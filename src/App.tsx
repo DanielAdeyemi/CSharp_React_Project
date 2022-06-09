@@ -5,6 +5,7 @@ import IndividualMovie from './movies/IndividualMovie';
 import { landingPageDTO, movieDTO } from './movies/movies.model';
 import MoviesList from './movies/MoviesList';
 import Button from './utils/Button';
+import Menu from './Menu';
 
 function App() {
   const [movies, setMovies] = useState<landingPageDTO>({});
@@ -36,12 +37,15 @@ function App() {
   }, []);
 
   return (
+    <>
+    <Menu />
     <div className='container'>
       <h3>In Theaters: </h3>
       <MoviesList movies={movies.inTheaters}/>
       <h3>Upcoming</h3>
       <MoviesList movies={movies.upcomingReleases} />
     </div>
+    </>
   );
 }
 
