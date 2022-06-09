@@ -30,7 +30,7 @@ function App() {
     poster: 'https://www.thestatesman.com/wp-content/uploads/2019/01/Hello2.png'}
   ]
         })
-      }, 1000);
+      }, 1500);
     };
   }, []);
 

@@ -1,10 +1,11 @@
+import Loading from "../utils/Loading";
 import IndividualMovie from "./IndividualMovie";
 import { movieDTO } from "./movies.model";
 import css from './MoviesList.module.css';
 
 export default function MoviesList(props: moviesListProps) {
   return !props.movies ? (
-      <h2>Loading...</h2>
+      <Loading />
     )
      : props.movies.length !== 0 ? (
     <div className={css.div}>
